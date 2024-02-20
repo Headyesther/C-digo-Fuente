@@ -1,0 +1,18 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using static System.Net.Mime.MediaTypeNames;
+using static System.Runtime.CompilerServices.RuntimeHelpers;
+
+public class PinMap : MonoBehaviour
+{
+public void OnKeyDown(KeyCode key)
+    {
+        // Si la tecla presionada es F
+        if (key == KeyCode.F)
+        {
+            // Realiza la depuración
+            Application.OpenURL("https://maps.app.goo.gl/uemqRNFHuireD3G67");
+        }
+    }
+}
