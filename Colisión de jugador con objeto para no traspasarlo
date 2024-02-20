@@ -1,0 +1,25 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using static System.Net.Mime.MediaTypeNames;
+using static System.Runtime.CompilerServices.RuntimeHelpers;
+
+public class PinMap : MonoBehaviour
+{
+    // El tag del jugador
+    public string playerTag = "Player";
+
+    // El rango de interacción
+    public float interactRange = 100f;
+
+    // El evento de colisión
+    private void OnTriggerEnter(Collider other)
+    {
+        // Si el que entró al trigger es el jugador
+        if (other.gameObject.tag == playerTag)
+        {
+            OnKeyDown(KeyCode.F);
+        }
+    }
+
+ 
